@@ -1,0 +1,38 @@
+// Interface 1
+interface Animal {
+    void eat();
+}
+
+// Interface 2
+interface Mammal {
+    void walk();
+}
+
+// Parent class
+class Dog {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Child class implementing multiple interfaces and extending a class
+class HybridDog extends Dog implements Animal, Mammal {
+    @Override
+    public void eat() {
+        System.out.println("Dog eats");
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("Dog walks");
+    }
+}
+
+public class HybridInheritanceExample {
+    public static void main(String[] args) {
+        HybridDog hybridDog = new HybridDog();
+        hybridDog.bark();
+        hybridDog.eat();
+        hybridDog.walk();
+    }
+}
