@@ -1,0 +1,23 @@
+public class WrapperClassExample {
+    public static void main(String[] args) {
+        // Creating wrapper class objects
+        Integer intObj = Integer.valueOf(10);
+        Double doubleObj = Double.valueOf(5.5);
+        Character charObj = Character.valueOf('A');
+
+        // Printing the values of wrapper class objects
+        System.out.println("Integer object: " + intObj);
+        System.out.println("Double object: " + doubleObj);
+        System.out.println("Character object: " + charObj);
+
+        // Converting wrapper class objects to primitive types
+        int intValue = intObj.intValue();
+        double doubleValue = doubleObj.doubleValue();
+        char charValue = charObj.charValue();
+
+        // Printing the values of primitive types
+        System.out.println("int value: " + intValue);
+        System.out.println("double value: " + doubleValue);
+        System.out.println("char value: " + charValue);
+    }
+}
