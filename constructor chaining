@@ -1,0 +1,38 @@
+// Parent class
+class Vehicle {
+    String type;
+
+    // Constructor with one parameter
+    Vehicle(String type) {
+        this.type = type;
+        System.out.println("Vehicle constructor called. Type: " + type);
+    }
+}
+
+// Child class
+class Car extends Vehicle {
+    String brand;
+    String model;
+
+    // Constructor with three parameters
+    Car(String type, String brand, String model) {
+        // Calling the parent class constructor
+        super(type);
+        this.brand = brand;
+        this.model = model;
+        System.out.println("Car constructor called. Brand: " + brand + ", Model: " + model);
+    }
+
+    // Constructor with two parameters
+    Car(String brand, String model) {
+        // Calling another constructor in the same class
+        this("Car", brand, model);
+    }
+}
+
+public class ConstructorChainingExample {
+    public static void main(String[] args) {
+        // Creating an object of the Car class using the constructor with two parameters
+        Car car = new Car("Toyota", "Corolla");
+    }
+}
