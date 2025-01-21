@@ -1,0 +1,41 @@
+// Abstract class
+abstract class Shape {
+    // Abstract method (no implementation)
+    abstract void draw();
+
+    // Concrete method
+    void display() {
+        System.out.println("This is a shape.");
+    }
+}
+
+// Subclass 1
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a circle.");
+    }
+}
+
+// Subclass 2
+class Rectangle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a rectangle.");
+    }
+}
+
+public class AbstractClassExample {
+    public static void main(String[] args) {
+        // Creating objects of subclasses
+        Shape circle = new Circle();
+        Shape rectangle = new Rectangle();
+
+        // Calling methods
+        circle.display();
+        circle.draw();
+
+        rectangle.display();
+        rectangle.draw();
+    }
+}
