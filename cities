@@ -1,0 +1,17 @@
+import java.util.Arrays;
+
+public class SortCities {
+    public static void main(String[] args) {
+        // Array of metro city names
+        String[] cities = {"Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata", "Hyderabad", "Pune"};
+
+        // Sorting the array
+        Arrays.sort(cities);
+
+        // Printing the sorted array
+        System.out.println("Sorted list of metro cities:");
+        for (String city : cities) {
+            System.out.println(city);
+        }
+    }
+}
